@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Admin | Flow Code</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar">
+        <div class="container nav-container">
+            <!-- LOGO ACTUALIZADO -->
+            <div class="logo">
+                <a href="index.html">
+                    <!-- Logo oficial 400x100 -->
+                    <img src="assets/logoweb.png" alt="Flow Code" class="logo-img">
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Producto</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Ecosistema <i class="ph ph-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="cliente.html"><i class="ph ph-terminal-window"></i> Cliente Developer</a>
+                        <a href="admin.html"><i class="ph ph-kanban"></i> Plataforma Admin</a>
+                    </div>
+                </li>
+                <li><a href="agentes.html">Agentes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="contacto.html" class="btn btn-primary">Solicitar Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO COMPACTO -->
+    <header class="hero-section hero-inner">
+        <div class="container text-center">
+            <div class="badge-pill" style="margin: 0 auto 1.5rem auto;">
+                <span class="dot"></span> Gestión Enterprise
+            </div>
+            <h1>
+                Centro de Comando para <br> 
+                <span class="text-gradient">Tech Leads & Arquitectos</span>
+            </h1>
+            <p class="hero-subtitle" style="margin: 1.5rem auto;">
+                Define las reglas del juego. Configura agentes, estandariza procesos y asigna permisos granulares desde un único panel.
+            </p>
+        </div>
+    </header>
+
+    <!-- GOBIERNO & DASHBOARD VISUAL -->
+    <section class="tech-section">
+        <div class="container">
+            <div class="dual-panel">
+                
+                <!-- Columna de Texto -->
+                <div class="panel-text">
+                    <span class="subtitle-accent">GOBERNANZA</span>
+                    <h2>Orquestación Centralizada</h2>
+                    <p>Evita que cada desarrollador use la IA a su manera. Centraliza los prompts, las reglas de linting y la arquitectura.</p>
+                    
+                    <div class="feature-list-vertical">
+                        <div class="feature-item">
+                            <i class="ph-duotone ph-toolbox icon-glow"></i>
+                            <div>
+                                <h4>Tool Kits Dinámicos</h4>
+                                <p class="small-desc">Crea kits de herramientas (Agentes + Reglas) y asígnalos a equipos específicos.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="ph-duotone ph-buildings icon-glow"></i>
+                            <div>
+                                <h4>Multi-Tenant</h4>
+                                <p class="small-desc">Gestiona múltiples clientes, áreas y proyectos con aislamiento total de datos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Visual (Simulación Dashboard) -->
+                <!-- Nota: Usamos una estructura que estilizará el CSS existente -->
+                <div class="panel-visual">
+                    <div class="abstract-dashboard">
+                        <!-- Mockup de UI del Dashboard -->
+                        <div style="padding: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; height: 100%;">
+                            <!-- Header Falso -->
+                            <div style="grid-column: span 2; display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+                                <span style="font-size: 0.8rem; font-weight: bold; color: white;">Admin Panel</span>
+                                <div style="display: flex; gap: 5px;">
+                                    <div style="width: 8px; height: 8px; border-radius: 50%; background: #22d3ee;"></div>
+                                    <div style="width: 8px; height: 8px; border-radius: 50%; background: #34d399;"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Stat Card 1 -->
+                            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 15px; display: flex; flex-direction: column; justify-content: center;">
+                                <span style="font-size: 0.7rem; color: #94a3b8;">Agentes Activos</span>
+                                <span style="font-size: 1.5rem; font-weight: bold; color: white;">25</span>
+                            </div>
+                            
+                            <!-- Stat Card 2 -->
+                            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 15px; display: flex; flex-direction: column; justify-content: center;">
+                                <span style="font-size: 0.7rem; color: #94a3b8;">Proyectos</span>
+                                <span style="font-size: 1.5rem; font-weight: bold; color: white;">12</span>
+                            </div>
+                            
+                            <!-- Graph Placeholder -->
+                            <div style="grid-column: span 2; background: rgba(255,255,255,0.03); border-radius: 8px; padding: 15px; display: flex; align-items: flex-end; gap: 10px; height: 80px;">
+                                <div style="width: 20%; height: 40%; background: #22d3ee; opacity: 0.5; border-radius: 4px;"></div>
+                                <div style="width: 20%; height: 70%; background: #22d3ee; opacity: 0.7; border-radius: 4px;"></div>
+                                <div style="width: 20%; height: 50%; background: #22d3ee; opacity: 0.6; border-radius: 4px;"></div>
+                                <div style="width: 20%; height: 90%; background: #22d3ee; opacity: 0.9; border-radius: 4px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CARACTERÍSTICAS GRID -->
+    <section class="features-section bg-surface">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Control Total de Activos</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="glass-card">
+                    <div class="icon-box"><i class="ph-duotone ph-users-three"></i></div>
+                    <h3>Gestión de Equipos</h3>
+                    <p>Alta y baja de desarrolladores en segundos. Asigna roles y permisos según la seniority.</p>
+                </div>
+                <div class="glass-card">
+                    <div class="icon-box"><i class="ph-duotone ph-book-bookmark"></i></div>
+                    <h3>Librería de Componentes</h3>
+                    <p>Repositorio centralizado de templates. Si actualizas un prompt aquí, se actualiza para todos.</p>
+                </div>
+                <div class="glass-card">
+                    <div class="icon-box"><i class="ph-duotone ph-key"></i></div>
+                    <h3>Seguridad y Tokens</h3>
+                    <p>Gestión granular de accesos. Revoca permisos de proyectos específicos al instante.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="workflow-section">
+        <div class="container text-center">
+            <h2 style="margin-bottom: 1.5rem;">Comienza a Orquestar a la IA</h2>
+            <p style="max-width: 600px; margin: 0 auto 2.5rem auto; color: var(--text-body);">
+                Habilita tu entorno empresarial hoy mismo. Solicita una Demo.
+            </p>
+            <a href="contacto.html" class="btn btn-glow">Solicitar Demo</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h4>FLOW CODE</h4>
+                <p>AI-Assisted Development</p>
+            </div>
+            <div class="footer-links">
+                <div class="col">
+                    <h5>Producto</h5>
+                    <a href="cliente.html">Cliente</a>
+                    <a href="admin.html">Admin</a>
+                    <a href="agentes.html">Agentes</a>
+                </div>
+                <div class="col">
+                    <h5>Compañía</h5>
+                    <a href="sobre_nosotros.html">Sobre Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2025 Flow Code. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Vinculación del script -->
+    <script src="script.js"></script>
+</body>
+</html>

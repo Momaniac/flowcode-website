@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Demo | Flow Code</title>
+    <!-- Vinculación de estilos -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Iconos -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar">
+        <div class="container nav-container">
+            <!-- LOGO ACTUALIZADO -->
+            <div class="logo">
+                <a href="index.html">
+                    <!-- Logo oficial 400x100 -->
+                    <img src="assets/logoweb.png" alt="Flow Code" class="logo-img">
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Producto</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Ecosistema <i class="ph ph-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="cliente.html"><i class="ph ph-terminal-window"></i> Cliente Developer</a>
+                        <a href="admin.html"><i class="ph ph-kanban"></i> Plataforma Admin</a>
+                    </div>
+                </li>
+                <li><a href="agentes.html">Agentes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="contacto.html" class="btn btn-primary">Solicitar Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO COMPACTO -->
+    <header class="hero-section hero-inner">
+        <div class="container text-center">
+            <div class="badge-pill" style="margin: 0 auto 1.5rem auto;">
+                <span class="dot"></span> Soporte Enterprise
+            </div>
+            <h1>
+                Comienza a <br> 
+                <span class="text-gradient">Estandarizar tu Desarrollo</span>
+            </h1>
+            <p class="hero-subtitle" style="margin: 1.5rem auto;">
+                Déjanos tus datos. Un especialista revisará las necesidades de tu equipo para ofrecerte la mejor solución.
+            </p>
+        </div>
+    </header>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                
+                <!-- Tarjeta del Formulario (Glassmorphism) -->
+                <div class="form-card glass-card">
+                    <div class="form-header">
+                        <h3>Datos del Proyecto</h3>
+                        <p>Todos los campos son obligatorios para entender mejor cómo podemos ayudarte.</p>
+                    </div>
+
+                    <form id="demoForm">
+                        <div class="form-grid">
+                            
+                            <!-- Nombre -->
+                            <div class="form-group">
+                                <label for="nombre">Nombre Completo</label>
+                                <div class="input-wrapper">
+                                    <i class="ph ph-user"></i>
+                                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="email">Correo Corporativo</label>
+                                <div class="input-wrapper">
+                                    <i class="ph ph-envelope"></i>
+                                    <input type="email" id="email" name="email" placeholder="juan@empresa.com" required>
+                                </div>
+                            </div>
+
+                            <!-- Empresa -->
+                            <div class="form-group">
+                                <label for="empresa">Empresa</label>
+                                <div class="input-wrapper">
+                                    <i class="ph ph-buildings"></i>
+                                    <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu organización" required>
+                                </div>
+                            </div>
+
+                            <!-- Puesto -->
+                            <div class="form-group">
+                                <label for="puesto">Cargo / Rol</label>
+                                <div class="input-wrapper">
+                                    <i class="ph ph-briefcase"></i>
+                                    <select id="puesto" name="puesto" required>
+                                        <option value="" disabled selected>Selecciona tu rol...</option>
+                                        <option value="cto">CTO / VP de Ingeniería</option>
+                                        <option value="techlead">Tech Lead / Arquitecto</option>
+                                        <option value="pm">Product Manager</option>
+                                        <option value="dev">Desarrollador Senior</option>
+                                        <option value="other">Otro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Comentarios (Ancho completo) -->
+                            <div class="form-group full-width">
+                                <label for="comentarios">Necesidades del Equipo</label>
+                                <div class="input-wrapper">
+                                    <i class="ph ph-chat-text icon-textarea"></i>
+                                    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Cuéntanos brevemente qué stack tecnológico utilizan (Ej: Java, React, Python)..." required></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Botón Submit -->
+                            <div class="form-footer">
+                                <button type="submit" class="btn btn-glow btn-block">
+                                    Enviar Solicitud <i class="ph-bold ph-paper-plane-right"></i>
+                                </button>
+                                <p class="privacy-text"><i class="ph-fill ph-lock-key"></i> Tus datos están protegidos bajo nuestra política de privacidad.</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DE ÉXITO (Oculto por defecto) -->
+    <div id="successModal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <div class="modal-icon">
+                <i class="ph-duotone ph-check-circle"></i>
+            </div>
+            <h3>¡Solicitud Recibida!</h3>
+            <p>Hemos registrado tu interés. Un especialista te contactará en las próximas 24 horas.</p>
+            <button class="btn btn-primary" id="closeBtn">Entendido</button>
+        </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h4>FLOW CODE</h4>
+                <p>AI-Assisted Development</p>
+            </div>
+            <div class="footer-links">
+                <div class="col">
+                    <h5>Producto</h5>
+                    <a href="cliente.html">Cliente</a>
+                    <a href="admin.html">Admin</a>
+                    <a href="agentes.html">Agentes</a>
+                </div>
+                <div class="col">
+                    <h5>Compañía</h5>
+                    <a href="sobre_nosotros.html">Sobre Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2025 Flow Code. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Vinculación del script -->
+    <script src="script.js"></script>
+</body>
+</html>

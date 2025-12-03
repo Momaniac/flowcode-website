@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros | Flow Code</title>
+    <!-- Vinculación de estilos -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Iconos -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar">
+        <div class="container nav-container">
+            <!-- LOGO ACTUALIZADO -->
+            <div class="logo">
+                <a href="index.html">
+                    <!-- Logo oficial 400x100 -->
+                    <img src="assets/logoweb.png" alt="Flow Code" class="logo-img">
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Producto</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Ecosistema <i class="ph ph-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="cliente.html"><i class="ph ph-terminal-window"></i> Cliente Developer</a>
+                        <a href="admin.html"><i class="ph ph-kanban"></i> Plataforma Admin</a>
+                    </div>
+                </li>
+                <li><a href="agentes.html">Agentes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="contacto.html" class="btn btn-primary">Solicitar Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO COMPACTO -->
+    <header class="hero-section hero-inner">
+        <div class="container text-center">
+            <div class="badge-pill" style="margin: 0 auto 1.5rem auto;">
+                <span class="dot"></span> Nuestra Misión
+            </div>
+            <h1>
+                Reimaginando el <br> 
+                <span class="text-gradient">Desarrollo de Software</span>
+            </h1>
+            <p class="hero-subtitle" style="margin: 1.5rem auto;">
+                No buscamos reemplazar a los desarrolladores, sino darles superpoderes. Creemos en la orquestación humana sobre la generación caótica.
+            </p>
+        </div>
+    </header>
+
+    <!-- HISTORIA / MANIFIESTO -->
+    <section class="tech-section">
+        <div class="container">
+            <div class="dual-panel">
+                
+                <div class="panel-text">
+                    <span class="subtitle-accent">EL PROBLEMA</span>
+                    <h2>El Fin del "Vibe Coding"</h2>
+                    <p>En los últimos años, la IA ha transformado la programación, pero también ha traído caos. Código generado sin contexto, alucinaciones y falta de estándares de seguridad.</p>
+                    <p>Flow Code nació en 2024 con una premisa simple: <strong>La IA debe ser un empleado más, no un mago impredecible.</strong></p>
+                    <p>Creamos una capa de gobernanza que permite a las empresas adoptar la IA sin sacrificar la calidad ni la seguridad de su propiedad intelectual.</p>
+                </div>
+
+                <!-- Visual Abstracto -->
+                <div class="panel-visual">
+                    <div class="abstract-dashboard">
+                        <!-- Representación visual de orden vs caos -->
+                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; gap: 20px;">
+                            <div style="text-align: center; opacity: 0.5;">
+                                <i class="ph-duotone ph-tornado" style="font-size: 3rem; margin-bottom: 10px;"></i>
+                                <p style="font-size: 0.8rem;">Caos</p>
+                            </div>
+                            <i class="ph-bold ph-arrow-right" style="color: var(--primary); font-size: 1.5rem;"></i>
+                            <div style="text-align: center; color: var(--primary);">
+                                <i class="ph-duotone ph-circles-three-plus" style="font-size: 3rem; margin-bottom: 10px;"></i>
+                                <p style="font-size: 0.8rem; font-weight: bold;">Estructura</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- VALORES (Grid de Tarjetas) -->
+    <section class="features-section bg-surface">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Nuestros Principios</h2>
+                <p>Lo que nos guía al construir tecnología.</p>
+            </div>
+            
+            <div class="features-grid">
+                <!-- Valor 1 -->
+                <div class="glass-card">
+                    <div class="icon-box"><i class="ph-duotone ph-lock-key-open"></i></div>
+                    <h3>Transparencia Radical</h3>
+                    <p>Tu código es tuyo. No entrenamos modelos públicos con tus datos. Nuestra arquitectura local garantiza privacidad total.</p>
+                </div>
+
+                <!-- Valor 2 -->
+                <div class="glass-card highlight-border">
+                    <div class="icon-box highlight"><i class="ph-duotone ph-brain"></i></div>
+                    <h3>IA Especializada</h3>
+                    <p>Rechazamos los modelos "todólogos". Preferimos agentes pequeños y expertos que hagan una sola cosa perfectamente.</p>
+                </div>
+
+                <!-- Valor 3 -->
+                <div class="glass-card">
+                    <div class="icon-box"><i class="ph-duotone ph-users"></i></div>
+                    <h3>Human in the Loop</h3>
+                    <p>La IA propone, el humano dispone. Nuestras herramientas están diseñadas para mantener al desarrollador al mando.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESTADÍSTICAS SIMPLES -->
+    <section class="workflow-section">
+        <div class="container">
+            <div class="timeline-container" style="text-align: center; grid-template-columns: repeat(3, 1fr);">
+                <div>
+                    <h3 style="font-size: 3rem; color: var(--primary);">+10k</h3>
+                    <p style="color: var(--text-body);">Horas de Desarrollo Ahorradas</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 3rem; color: var(--primary);">99%</h3>
+                    <p style="color: var(--text-body);">Precisión Sintáctica</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 3rem; color: var(--primary);">Zero</h3>
+                    <p style="color: var(--text-body);">Fugas de Datos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FOOTER -->
+    <section class="contact-section" style="padding-top: 0;">
+        <div class="container text-center">
+            <h2 style="margin-bottom: 2rem;">¿Listo para evolucionar?</h2>
+            <a href="contacto.html" class="btn btn-glow">Únete a la revolución</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h4>FLOW CODE</h4>
+                <p>AI-Assisted Development</p>
+            </div>
+            <div class="footer-links">
+                <div class="col">
+                    <h5>Producto</h5>
+                    <a href="cliente.html">Cliente</a>
+                    <a href="admin.html">Admin</a>
+                    <a href="agentes.html">Agentes</a>
+                </div>
+                <div class="col">
+                    <h5>Compañía</h5>
+                    <a href="sobre_nosotros.html">Sobre Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2025 Flow Code. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Vinculación del script -->
+    <script src="script.js"></script>
+</body>
+</html>

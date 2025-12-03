@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Agentes | Flow Code</title>
+    <!-- Vinculación de estilos -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Iconos -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar">
+        <div class="container nav-container">
+            <!-- LOGO ACTUALIZADO -->
+            <div class="logo">
+                <a href="index.html">
+                    <!-- Logo oficial 400x100 -->
+                    <img src="assets/logoweb.png" alt="Flow Code" class="logo-img">
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Producto</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Ecosistema <i class="ph ph-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="cliente.html"><i class="ph ph-terminal-window"></i> Cliente Developer</a>
+                        <a href="admin.html"><i class="ph ph-kanban"></i> Plataforma Admin</a>
+                    </div>
+                </li>
+                <li><a href="agentes.html">Agentes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="contacto.html" class="btn btn-primary">Solicitar Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO COMPACTO -->
+    <header class="hero-section hero-inner">
+        <div class="container text-center">
+            <div class="badge-pill" style="margin: 0 auto 1.5rem auto;">
+                <span class="dot"></span> Librería de Expertos v2.0
+            </div>
+            <h1>
+                Fuerza Laboral <br> 
+                <span class="text-gradient">Sintética & Especializada</span>
+            </h1>
+            <p class="hero-subtitle" style="margin: 1.5rem auto;">
+                25 perfiles de IA pre-entrenados. No son chatbots genéricos; son roles con contexto, herramientas y personalidades definidas.
+            </p>
+        </div>
+    </header>
+
+    <!-- DEFINICIÓN DE AGENTE (Texto + Visual) -->
+    <section class="tech-section">
+        <div class="container">
+            <div class="dual-panel">
+                
+                <!-- Visual: Simulación de Chat con Agente -->
+                <!-- Reutilizamos el estilo de terminal que creamos para Cliente -->
+                <div class="panel-visual">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="dots">
+                                <span class="bg-red"></span><span class="bg-yellow"></span><span class="bg-green"></span>
+                            </div>
+                            <span class="terminal-title">Agent: Frontend Lead — Session #42</span>
+                        </div>
+                        <div class="terminal-body">
+                            <!-- Mensaje Usuario -->
+                            <div style="margin-bottom: 15px;">
+                                <span style="color: #94a3b8; font-size: 0.8rem;">[User]</span>
+                                <p style="color: white; margin-top: 5px;">El componente Drawer no respeta el tema oscuro.</p>
+                            </div>
+                            <!-- Mensaje Agente -->
+                            <div style="margin-bottom: 15px; border-left: 2px solid #22d3ee; padding-left: 10px;">
+                                <span style="color: #22d3ee; font-size: 0.8rem;">[Frontend Lead]</span>
+                                <p style="color: #cbd5e1; margin-top: 5px;">Entendido. He localizado el archivo <code>drawer.tsx</code>. Falta la clase condicional de Tailwind. ¿Aplico el fix ahora?</p>
+                            </div>
+                            <div class="cursor-blink">_</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Texto Explicativo -->
+                <div class="panel-text">
+                    <span class="subtitle-accent">CONCEPTO</span>
+                    <h2>¿Qué es un Agente Flow?</h2>
+                    <p>Es una especificación de comportamiento del LLM. Limitamos su creatividad para aumentar su precisión técnica.</p>
+                    
+                    <div class="feature-list-vertical">
+                        <div class="feature-item">
+                            <i class="ph-duotone ph-fingerprint icon-glow"></i>
+                            <div>
+                                <h4>Personalidad Técnica</h4>
+                                <p class="small-desc">Un "DevOps" no opinará sobre diseño UI. Se mantiene en su carril.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="ph-duotone ph-read-cv-logo icon-glow"></i>
+                            <div>
+                                <h4>Contexto Profundo</h4>
+                                <p class="small-desc">Conoce la estructura de tu proyecto antes de que le hagas la primera pregunta.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CATÁLOGO GRID -->
+    <section class="features-section bg-surface">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Catálogo Integrado</h2>
+                <p>Clasificación completa de los perfiles disponibles.</p>
+            </div>
+            
+            <div class="features-grid">
+                
+                <!-- Card Ingeniería -->
+                <div class="glass-card highlight-border">
+                    <div class="icon-box highlight"><i class="ph-duotone ph-wrench"></i></div>
+                    <h3>Ingeniería (6)</h3>
+                    <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #64748b;">Herramientas internas</p>
+                    <ul class="agent-list">
+                        <li>Creador de Agentes</li>
+                        <li>Creador de Reglas</li>
+                        <li>Creador de Procesos</li>
+                        <li>Prompt Engineer</li>
+                    </ul>
+                </div>
+
+                <!-- Card Desarrollo -->
+                <div class="glass-card highlight-border">
+                    <div class="icon-box highlight"><i class="ph-duotone ph-code"></i></div>
+                    <h3>Desarrollo (8)</h3>
+                    <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #64748b;">Core Coding</p>
+                    <ul class="agent-list">
+                        <li>Full Stack Developer</li>
+                        <li>Mobile Specialist</li>
+                        <li>Legacy Migration</li>
+                        <li>QA Tester Automation</li>
+                        <li>Security Specialist</li>
+                    </ul>
+                </div>
+
+                <!-- Card Gestión -->
+                <div class="glass-card highlight-border">
+                    <div class="icon-box highlight"><i class="ph-duotone ph-kanban"></i></div>
+                    <h3>Gestión (4)</h3>
+                    <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #64748b;">Liderazgo</p>
+                    <ul class="agent-list">
+                        <li>Product Owner</li>
+                        <li>Scrum Master</li>
+                        <li>Technical Lead FE</li>
+                        <li>Technical Lead BE</li>
+                    </ul>
+                </div>
+
+                <!-- Card Arquitectura -->
+                <div class="glass-card highlight-border">
+                    <div class="icon-box highlight"><i class="ph-duotone ph-compass-tool"></i></div>
+                    <h3>Arquitectura (2)</h3>
+                    <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #64748b;">Estructura</p>
+                    <ul class="agent-list">
+                        <li>Arquitecto de Sistemas</li>
+                        <li>Analista de Datos</li>
+                    </ul>
+                </div>
+
+                <!-- Card Especializados -->
+                <div class="glass-card highlight-border">
+                    <div class="icon-box highlight"><i class="ph-duotone ph-rocket"></i></div>
+                    <h3>Especializados (5)</h3>
+                    <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #64748b;">Nicho / Cloud</p>
+                    <ul class="agent-list">
+                        <li>Oracle PLSQL Expert</li>
+                        <li>Google Cloud Architect</li>
+                        <li>Java Legacy Expert</li>
+                        <li>Gemini Prompter</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER EVOLUCIÓN -->
+    <section class="workflow-section">
+        <div class="container text-center">
+            <!-- Icono animado (La animación float ya está en tu CSS anterior, así que funcionará) -->
+            <div style="font-size: 3rem; margin-bottom: 1rem; display: inline-block; animation: float 3s ease-in-out infinite;">🧬</div>
+            <h2>Evolución Constante</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem auto; color: var(--text-body);">
+                Gracias a nuestro <strong>Agente Creador de Agentes</strong>, integramos nuevos roles continuamente.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h4>FLOW CODE</h4>
+                <p>AI-Assisted Development</p>
+            </div>
+            <div class="footer-links">
+                <div class="col">
+                    <h5>Producto</h5>
+                    <a href="cliente.html">Cliente</a>
+                    <a href="admin.html">Admin</a>
+                    <a href="agentes.html">Agentes</a>
+                </div>
+                <div class="col">
+                    <h5>Compañía</h5>
+                    <a href="sobre_nosotros.html">Sobre Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2025 Flow Code. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Vinculación del script -->
+    <script src="script.js"></script>
+</body>
+</html>

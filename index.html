@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Code | Orquestación de IA</title>
+    <!-- Vinculación de estilos -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Iconos Phosphor -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- ESTILOS ESPECÍFICOS PARA CORREGIR LOGOS -->
+    <style>
+        .logos-grid {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem; /* Espacio entre logos */
+            flex-wrap: nowrap; /* Fuerza una sola línea */
+            overflow-x: auto; /* Permite scroll si la pantalla es muy pequeña */
+            padding: 10px 0;
+        }
+        
+        .logo-item img {
+            height: 35px !important; /* Altura fija pequeña */
+            width: auto !important;
+            max-width: 100%;
+            object-fit: contain;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        /* CORRECCIÓN DE PESO VISUAL */
+        /* Aumentamos el tamaño solo de los dos primeros (Google/OpenAI) */
+        .logos-grid .logo-item:nth-child(1) img,
+        .logos-grid .logo-item:nth-child(2) img {
+            height: 42px !important; /* 10px más grandes para compensar */
+        }
+
+        .logo-item img:hover {
+            opacity: 1;
+        }
+
+        /* Ajuste para móviles para que no se rompa */
+        @media (max-width: 768px) {
+            .logos-grid {
+                flex-wrap: wrap; /* En móvil sí permitimos 2 líneas si es necesario */
+                gap: 1.5rem;
+            }
+            .logo-item img {
+                height: 25px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar">
+        <div class="container nav-container">
+            <!-- LOGO ACTUALIZADO -->
+            <div class="logo">
+                <a href="index.html">
+                    <!-- Logo oficial 400x100 -->
+                    <img src="assets/logoweb.png" alt="Flow Code" class="logo-img">
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Producto</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Ecosistema <i class="ph ph-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="cliente.html"><i class="ph ph-terminal-window"></i> Cliente Developer</a>
+                        <a href="admin.html"><i class="ph ph-kanban"></i> Plataforma Admin</a>
+                    </div>
+                </li>
+                <li><a href="agentes.html">Agentes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="contacto.html" class="btn btn-primary">Solicitar Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section">
+        <!-- Contenedor para las partículas (JS) -->
+        <div id="particles-container">
+            <canvas id="particles-canvas"></canvas>
+        </div>
+
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <div class="badge-pill">
+                    <span class="dot"></span> Nueva Versión al Público - Disponible Próximamente
+                </div>
+                <h1>
+                    Orquesta tu código <br>
+                    con <span class="text-gradient">Inteligencia Artificial</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Flow Code elimina el caos del "Vibe Coding". Integra agentes seguros que conocen tu contexto, reglas y arquitectura empresarial.
+                </p>
+                <div class="cta-group">
+                    <a href="contacto.html" class="btn btn-glow">Empezar Ahora</a>
+                    <a href="agentes.html" class="btn btn-ghost">Ver Agentes <i class="ph ph-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <!-- Espacio reservado para balance visual en el diseño -->
+            </div>
+        </div>
+    </header>
+
+<!-- LOGOS / TRUSTED SECTION (Aquí van tus imágenes de marcas) -->
+    <section class="trusted-section">
+        <div class="container">
+            <p class="section-label">Potenciado por tecnologías líderes</p>
+            <div class="logos-grid">
+                <!-- Asegúrate de nombrar tus archivos así en la carpeta assets -->
+                <div class="logo-item opacity-low">
+                    <img src="assets/google.png" alt="Logo de Google Cloud">
+                </div>
+                <div class="logo-item opacity-low">
+                    <img src="assets/openai.png" alt="Logo de OpenAI">
+                </div>
+                <div class="logo-item opacity-low">
+                    <img src="assets/anthropic.png" alt="Logo de Anthropic">
+                </div>
+                <div class="logo-item opacity-low">
+                    <img src="assets/meta.png" alt="Logo de Meta">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARACTERÍSTICAS / WHY FLOW CODE -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle-accent">SOLUCIÓN UNIVERSAL</span>
+                <h2>¿Por qué elegir Flow Code?</h2>
+                <p>La primera plataforma diseñada para Tech Leads que necesitan control.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Tarjeta 1 -->
+                <div class="glass-card highlight-border">
+                    <div class="icon-box highlight">
+                        <i class="ph-duotone ph-shield-check"></i>
+                    </div>
+                    <h3>Gobernanza Total</h3>
+                    <p>Tu equipo no usa IA a ciegas. Tú defines las reglas, los agentes las ejecutan. Estandarización forzada pero invisible.</p>
+                </div>
+
+                <!-- Tarjeta 2 (Destacada) -->
+                <div class="glass-card highlight-border">
+                    <div class="icon-box highlight">
+                        <i class="ph-duotone ph-cpu"></i>
+                    </div>
+                    <h3>25 Agentes Expertos</h3>
+                    <p>Desde Frontend hasta QA. Nuestros agentes no alucinan, tienen roles y personalidades técnicas específicas.</p>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="glass-card highlight-border">
+                    <div class="icon-box highlight">
+                        <i class="ph-duotone ph-lock-key"></i>
+                    </div>
+                    <h3>Seguridad Enterprise</h3>
+                    <p>El código nunca sale de tu entorno local sin encriptación. Cumplimiento total de normativas de privacidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ECOSISTEMA (Con doble botón y Placeholder) -->
+    <section class="ecosystem-preview">
+        <div class="container">
+            <div class="dual-panel">
+                <div class="panel-text">
+                    <h2>El Ecosistema</h2>
+                    <p>Dos componentes, una solución unificada.</p>
+                    <ul class="check-list">
+                        <li><i class="ph-bold ph-check"></i> <strong>Cliente Java:</strong> Puente local seguro.</li>
+                        <li><i class="ph-bold ph-check"></i> <strong>Admin Flutter:</strong> Panel de control visual.</li>
+                    </ul>
+                    
+                    <div class="cta-group" style="margin-top: 2rem;">
+                        <a href="cliente.html" class="btn btn-glow" style="padding: 0.8rem 1.5rem; font-size: 0.9rem; min-width: 220px; justify-content: center;">
+                            <i class="ph ph-desktop"></i> Ver Cliente Developer
+                        </a>
+                        <a href="admin.html" class="btn btn-glow" style="padding: 0.8rem 1.5rem; font-size: 0.9rem; min-width: 220px; justify-content: center;">
+                            <i class="ph ph-sliders-horizontal"></i> Ver Panel Admin
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="panel-visual">
+                    <!-- Dashboard Image Updated -->
+                    <img src="assets/ecohome.png" alt="Plataforma Flow Code" class="img-full-height">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h4>FLOW CODE</h4>
+                <p>AI-Assisted Development</p>
+            </div>
+            <div class="footer-links">
+                <div class="col">
+                    <h5>Producto</h5>
+                    <a href="cliente.html">Cliente</a>
+                    <a href="admin.html">Admin</a>
+                    <a href="agentes.html">Agentes</a>
+                </div>
+                <div class="col">
+                    <h5>Compañía</h5>
+                    <a href="sobre_nosotros.html">Sobre Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2025 Flow Code. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Vinculación del script -->
+    <script src="script.js"></script>
+</body>
+</html>
