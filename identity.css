@@ -1,0 +1,579 @@
+/* identity.css - Estilos completos para Identity Shield */
+
+:root {
+    /* Paleta de colores: Seguridad & Defensa (Teal/Esmeralda) */
+    --shield-primary: #00E6B8; 
+    --shield-primary-dim: rgba(0, 230, 184, 0.1);
+    --shield-glow: rgba(0, 230, 184, 0.6);
+    
+    /* Colores de estado para métricas forenses */
+    --score-critical: #FF4D4D; /* Rojo: Manipulado/Falso */
+    --score-warning: #FFB84D; /* Naranja: Sospechoso */
+    --score-safe: #00E6B8;    /* Verde: Auténtico */
+    
+    /* Fondos oscuros específicos */
+    --bg-card-dark: #080808;
+    --bg-card-glass: rgba(10, 10, 10, 0.85);
+}
+
+/* --- UTILIDADES DE TEXTO & COLOR --- */
+
+/* Gradiente de Texto Verde Neón */
+.text-gradient-green {
+    background: linear-gradient(90deg, #ffffff 0%, var(--shield-primary) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Subtítulos de sección */
+.subtitle-accent-green {
+    display: block;
+    color: var(--shield-primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+/* Badge de "Sistema Operativo" */
+.badge-security {
+    background: rgba(0, 230, 184, 0.08);
+    border: 1px solid rgba(0, 230, 184, 0.3);
+    color: #ccfff5;
+}
+
+.dot-green {
+    height: 8px;
+    width: 8px;
+    background-color: var(--shield-primary);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px var(--shield-primary);
+    margin-right: 6px;
+}
+
+/* Colores de texto utilitarios */
+.text-green { color: var(--shield-primary) !important; }
+.text-warning { color: var(--score-warning) !important; }
+.text-critical { color: var(--score-critical) !important; }
+
+/* --- BOTONES --- */
+
+.btn-glow-green {
+    background: var(--shield-primary);
+    color: #000;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 0 15px rgba(0, 230, 184, 0.3);
+    display: inline-block;
+}
+
+.btn-glow-green:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(0, 230, 184, 0.5);
+    background: #33ffcc;
+}
+
+.btn-link-green {
+    color: var(--shield-primary);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    transition: gap 0.3s ease;
+}
+
+.btn-link-green:hover {
+    gap: 0.8rem;
+    color: #fff;
+}
+
+/* --- HERO SECTION --- */
+
+.hero-shield {
+    background: radial-gradient(circle at 50% 10%, rgba(0, 230, 184, 0.05) 0%, rgba(0, 0, 0, 0) 60%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- TARJETA VISUAL DEL HERO (PURE CSS GAUGE) --- */
+
+.visual-card-tilt {
+    transform: perspective(1000px) rotateY(-10deg) rotateX(5deg);
+    transition: transform 0.5s ease;
+    box-shadow: -20px 20px 60px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+}
+
+.visual-card-tilt:hover {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+.css-interface-card {
+    background: var(--bg-card-glass);
+    border: 1px solid rgba(0, 230, 184, 0.2);
+    padding: 1.5rem;
+    border-radius: 16px;
+    min-width: 300px;
+    max-width: 400px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card-header-mini {
+    font-size: 0.85rem;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 0.8rem;
+    font-family: monospace;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--score-critical); /* Rojo por defecto en el ejemplo */
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--score-critical);
+}
+
+/* Gauge Circular (Semicírculo) */
+.gauge-container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.css-gauge {
+    width: 200px;
+    height: 100px; /* Exactamente la mitad del ancho */
+    background: conic-gradient(
+        var(--shield-primary) 0%, 
+        var(--shield-primary) var(--gauge-value), 
+        rgba(255,255,255,0.05) var(--gauge-value), 
+        rgba(255,255,255,0.05) 100%
+    );
+    border-radius: 200px 200px 0 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-shadow: 0 -10px 30px rgba(0, 230, 184, 0.05);
+    transform: rotate(-90deg); /* Reorientar para CSS conic defaults */
+    transform-origin: bottom center; 
+    /* Ajuste visual simple para que empiece desde la izquierda: */
+    transform: none; 
+}
+
+/* Máscara interior del Gauge */
+.css-gauge::after {
+    content: '';
+    position: absolute;
+    width: 170px; /* Grosor del borde */
+    height: 85px;
+    background: #0a0a0a; /* Debe coincidir con el fondo de la tarjeta */
+    border-radius: 170px 170px 0 0;
+    bottom: 0;
+    left: 15px; /* Centrado (200 - 170) / 2 */
+}
+
+.gauge-inner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    bottom: 0;
+}
+
+.big-number {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #fff;
+    line-height: 1;
+    text-shadow: 0 0 20px var(--shield-primary-dim);
+}
+
+.gauge-inner .label {
+    font-size: 0.75rem;
+    color: var(--shield-primary);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    display: block;
+}
+
+.mini-stats-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.mini-stat {
+    text-align: center;
+}
+
+.mini-stat .label {
+    display: block;
+    font-size: 0.7rem;
+    color: #666;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.mini-stat .value {
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* --- SECCIÓN DE LOGOS (TEXTO) --- */
+
+.text-logos {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo-text {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700; /* ExtraBold */
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    transition: all 0.3s ease;
+    cursor: default;
+    user-select: none;
+}
+
+.logo-text:hover {
+    color: #fff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+/* --- TARJETAS DE CARACTERÍSTICAS (GLASS GREEN) --- */
+
+.glass-card.highlight-border-green {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.02);
+}
+
+.glass-card.highlight-border-green:hover {
+    border-color: var(--shield-primary);
+    box-shadow: 0 0 30px rgba(0, 230, 184, 0.1);
+    transform: translateY(-5px);
+}
+
+.icon-box.highlight-green {
+    background: rgba(0, 230, 184, 0.1);
+    color: var(--shield-primary);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(0, 230, 184, 0.2);
+}
+
+/* --- WORKFLOW STEPS --- */
+
+.workflow-section {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0, 230, 184, 0.02) 50%, rgba(0,0,0,0) 100%);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.step-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.step-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 230, 184, 0.3);
+}
+
+.step-number {
+    font-size: 5rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.02);
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    font-family: 'Outfit', sans-serif;
+    z-index: 0;
+    transition: color 0.3s;
+}
+
+.step-card:hover .step-number {
+    color: rgba(0, 230, 184, 0.05);
+}
+
+.step-card h4 {
+    color: var(--shield-primary);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    font-size: 1.3rem;
+}
+
+.step-card p {
+    position: relative;
+    z-index: 1;
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- DASHBOARD MOCKUP (PANEL DERECHO) --- */
+
+.css-dashboard-mockup {
+    background: var(--bg-card-dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    width: 100%;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    overflow: hidden;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.mockup-header {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.traffic-lights {
+    display: flex;
+    gap: 6px;
+}
+
+.traffic-lights span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #333;
+}
+.traffic-lights span:nth-child(1) { background: #ff5f56; } /* Red */
+.traffic-lights span:nth-child(2) { background: #ffbd2e; } /* Yellow */
+.traffic-lights span:nth-child(3) { background: #27c93f; } /* Green */
+
+.mockup-title {
+    font-size: 0.8rem;
+    color: #555;
+    font-family: monospace;
+}
+
+.mockup-body {
+    padding: 2rem;
+}
+
+.metric-group {
+    margin-bottom: 1.5rem;
+}
+
+.metric-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ddd;
+}
+
+/* Barras de progreso CSS */
+.css-progress-track {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.2rem;
+}
+
+.css-progress-fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1s ease-out; /* Animación suave al cargar */
+}
+
+/* Backgrounds para barras */
+.bg-green { background: var(--shield-primary); box-shadow: 0 0 10px rgba(0, 230, 184, 0.4); }
+.bg-critical { background: var(--score-critical); box-shadow: 0 0 10px rgba(255, 77, 77, 0.4); }
+.bg-warning { background: var(--score-warning); box-shadow: 0 0 10px rgba(255, 184, 77, 0.4); }
+
+.metric-group small {
+    display: block;
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 0.4rem;
+}
+
+/* Item verificado estilo lista */
+.verified-item {
+    background: rgba(0, 230, 184, 0.03);
+    border: 1px solid rgba(0, 230, 184, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    align-items: start;
+    gap: 0.8rem;
+    margin-top: 2.5rem;
+}
+
+.verified-item i {
+    font-size: 1.2rem;
+    margin-top: 2px;
+}
+
+.verified-item span:nth-child(2) {
+    font-size: 0.85rem;
+    color: #ccc;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.badge-mini {
+    font-size: 0.6rem;
+    background: rgba(0, 230, 184, 0.15);
+    color: var(--shield-primary);
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* --- CASOS DE USO --- */
+
+.cases-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.case-item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.05);
+    background: linear-gradient(180deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0) 100%);
+    transition: transform 0.3s ease;
+}
+
+.case-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.03);
+    border-color: rgba(255,255,255,0.1);
+}
+
+.case-item i {
+    font-size: 2.5rem;
+    color: var(--shield-primary);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgba(0,230,184,0.3));
+}
+
+.case-item h4 {
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.case-item p {
+    font-size: 0.95rem;
+    color: #aaa;
+    line-height: 1.5;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+
+@media (max-width: 768px) {
+    .visual-card-tilt {
+        transform: none; /* Desactivar 3D en móvil */
+        margin-top: 2rem;
+    }
+    
+    .visual-card-tilt:hover {
+        transform: none;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .cta-group {
+        justify-content: center;
+    }
+
+    .dual-panel.inverted {
+        flex-direction: column-reverse; /* Stack vertical en móvil */
+    }
+    
+    .text-logos {
+        gap: 1.5rem;
+    }
+    
+    .logo-text {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+/* Corrección del enlace del Navbar */
+.nav-shield-link {
+    color: var(--shield-primary) !important; /* Verde por defecto */
+    transition: all 0.3s ease;
+}
+
+.nav-shield-link:hover {
+    color: #ffffff !important; /* Blanco al pasar el mouse */
+    text-shadow: 0 0 12px var(--shield-primary); /* Brillo verde sutil */
+}

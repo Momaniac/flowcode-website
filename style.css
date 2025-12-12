@@ -486,3 +486,17 @@ input:focus, select:focus, textarea:focus {
     .form-group.full-width { grid-column: span 1; }
     .logo-img { height: 35px; } /* Ajuste de logo en móvil */
 }
+
+
+
+/* Estilo especial para el enlace Identity Shield en el menú */
+.nav-shield-link {
+    color: #00E6B8 !important; /* Verde Teal por defecto */
+    transition: all 0.3s ease;
+    font-weight: 500; /* Asegura el mismo peso que los otros links */
+}
+
+.nav-shield-link:hover {
+    color: #ffffff !important; /* Blanco al pasar el mouse */
+    text-shadow: 0 0 12px rgba(0, 230, 184, 0.6); /* Pequeño brillo verde */
+}
